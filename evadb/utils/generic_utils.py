@@ -576,6 +576,7 @@ def try_to_import_chromadb_client():
 def try_to_import_weaviate_client():
     try:
         import weaviate  # noqa: F401
+        from weaviate.util import generate_uuid5  # noqa: F401
     except ImportError:
         raise ValueError(
             """Could not import weaviate python package.
